@@ -39,8 +39,8 @@ PRODUCT_COPY_FILES := \
     frameworks/base/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
 
 # media config xml file
-PRODUCT_COPY_FILES += \
-    device/htc/passion-common/media_profiles.xml:system/etc/media_profiles.xml
+#PRODUCT_COPY_FILES += \
+#    device/htc/passion-common/media_profiles.xml:system/etc/media_profiles.xml
 
 # Get the long list of APNs
 PRODUCT_COPY_FILES += device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
@@ -48,9 +48,9 @@ PRODUCT_COPY_FILES += device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.
 PRODUCT_PACKAGES := \
     sensors.mahimahi \
     lights.mahimahi \
-    gralloc.qsd8k \
     librs_jni \
-    com.android.future.usb.accessory
+    com.android.future.usb.accessory \
+#    gralloc.qsd8k
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
