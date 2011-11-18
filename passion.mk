@@ -17,7 +17,14 @@
 PRODUCT_PROPERTY_OVERRIDES :=
     ro.media.dec.jpeg.memcap=20000000
 
-DEVICE_PACKAGE_OVERLAYS := device/htc/passion-common/overlay
+#DEVICE_PACKAGE_OVERLAYS := device/htc/passion-common/overlay
+
+  # Turn on checkjni for non-user builds.
+  #ADDITIONAL_BUILD_PROPERTIES += ro.kernel.android.checkjni=1
+  # Set device insecure for non-user builds.
+  ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
+  # Allow mock locations by default for non user builds
+  ADDITIONAL_DEFAULT_PROPERTIES += ro.allow.mock.location=1
 
 PRODUCT_COPY_FILES := \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -34,6 +41,9 @@ PRODUCT_COPY_FILES := \
 # media config xml file
 PRODUCT_COPY_FILES += \
     device/htc/passion-common/media_profiles.xml:system/etc/media_profiles.xml
+
+# Get the long list of APNs
+PRODUCT_COPY_FILES += device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 
 PRODUCT_PACKAGES := \
     sensors.mahimahi \

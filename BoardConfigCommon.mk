@@ -51,7 +51,7 @@ BOARD_VENDOR_QCOM_AMSS_VERSION := 3200
 
 BOARD_VENDOR_USE_AKMD := akm8973
 
-BOARD_EGL_CFG := device/htc/passion-common/egl.cfg
+#BOARD_EGL_CFG := device/htc/passion-common/egl.cfg
 
 # # cat /proc/mtd
 # dev:    size   erasesize  name
@@ -64,7 +64,7 @@ BOARD_EGL_CFG := device/htc/passion-common/egl.cfg
 # mtd6: 00200000 00020000 "crashdata"
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00280000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00500000
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x08400000   # limited so we enforce room to grow
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x09000000 #0x08400000   # limited so we enforce room to grow
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x0c440000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
@@ -73,9 +73,9 @@ ifeq (eng,$(TARGET_BUILD_VARIANT))
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x09000000
 endif
 
-TARGET_RECOVERY_UI_LIB := librecovery_ui_passion librecovery_ui_htc
+#TARGET_RECOVERY_UI_LIB := librecovery_ui_passion librecovery_ui_htc
 
-TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_htc
+#TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_htc
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 

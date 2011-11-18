@@ -20,6 +20,9 @@
 # Refer to the input device calibration documentation for more details.
 #
 
+touch.deviceType = touchScreen
+touch.orientationAware = 1
+
 # Touch Size
 touch.touchSize.calibration = pressure
 
