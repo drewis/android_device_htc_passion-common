@@ -17,7 +17,7 @@
 PRODUCT_PROPERTY_OVERRIDES :=
     ro.media.dec.jpeg.memcap=20000000
 
-#DEVICE_PACKAGE_OVERLAYS := device/htc/passion-common/overlay
+DEVICE_PACKAGE_OVERLAYS := device/htc/passion-common/overlay
 
   # Turn on checkjni for non-user builds.
   #ADDITIONAL_BUILD_PROPERTIES += ro.kernel.android.checkjni=1
@@ -50,7 +50,7 @@ PRODUCT_PACKAGES := \
     lights.mahimahi \
     librs_jni \
     com.android.future.usb.accessory \
-#    gralloc.qsd8k
+    gralloc.qsd8k
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
